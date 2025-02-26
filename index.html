@@ -1,111 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Water Engineering Hub</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #eef4f9;
-            color: #333;
-        }
-        header {
-            background: #004080;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            margin: 0.5rem 0 0;
-        }
-        nav {
-            background: #0056b3;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-size: 1.2rem;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 2rem;
-        }
-        section {
-            margin-bottom: 2rem;
-        }
-        h2 {
-            color: #004080;
-        }
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-        footer {
-            background: #004080;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>AI Water Engineering Hub</h1>
-        <p>Innovating Water Solutions with Artificial Intelligence</p>
-    </header>
-    <nav>
-        <a href="#about">About Us</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#research">Research</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>The AI Water Engineering Hub is at the forefront of leveraging artificial intelligence to solve critical challenges in water management, distribution, and conservation. Our team combines expertise in AI, hydrology, and environmental engineering to develop sustainable solutions for a water-secure future.</p>
-        </section>
-        <section id="solutions">
-            <h2>Our Solutions</h2>
-            <ul>
-                <li><strong>Predictive Analytics:</strong> Forecasting water demand and supply using AI-driven models.</li>
-                <li><strong>Smart Irrigation Systems:</strong> Optimizing water usage in agriculture with real-time AI insights.</li>
-                <li><strong>Leak Detection:</strong> Utilizing machine learning to identify and mitigate pipeline losses.</li>
-                <li><strong>Flood and Drought Management:</strong> AI models to predict and manage extreme weather impacts.</li>
-            </ul>
-        </section>
-        <section id="research">
-            <h2>Research and Innovations</h2>
-            <p>Our hub collaborates with leading academic institutions and industry partners to advance research in areas like:</p>
-            <ul>
-                <li>AI-enhanced water quality monitoring</li>
-                <li>Climate change impact analysis</li>
-                <li>Integration of IoT and AI for real-time water management</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>For partnerships, inquiries, or more information, reach out to us:</p>
-            <p>Email: <a href="mailto:info@aiwaterhub.com">info@aiwaterhub.com</a></p>
-            <p>Phone: +123-456-7890</p>
-            <p>Address: 123 AI Avenue, WaterTech City, Earth</p>
-        </section>
-    </main>
-    <footer>
-        &copy; 2024 AI Water Engineering Hub. All Rights Reserved.
-    </footer>
-</body>
-</html>
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { MessageCircle } from "lucide-react";
+
+const AIWaterHub = () => {
+  const [posts, setPosts] = useState([
+    { id: 1, title: "How can AI improve water quality monitoring?", content: "AI models can predict contamination levels in real-time.", comments: [] },
+    { id: 2, title: "Best AI tools for flood prediction?", content: "Machine learning models trained on historical data can improve forecasting.", comments: [] }
+  ]);
+  const [newPost, setNewPost] = useState({ title: "", content: "" });
+  const [newComment, setNewComment] = useState({});
+
+  const handlePostSubmit = () => {
+    if (newPost.title && newPost.content) {
+      setPosts([...posts, { id: posts.length + 1, title: newPost.title, content: newPost.content, comments: [] }]);
+      setNewPost({ title: "", content: "" });
+    }
+  };
+
+  const handleCommentSubmit = (postId) => {
+    if (newComment[postId]) {
+      setPosts(posts.map(post =>
+        post.id === postId ? { ...post, comments: [...post.comments, newComment[postId]] } : post
+      ));
+      setNewComment({ ...newComment, [postId]: "" });
+    }
+  };
+
+  return (
+    <div className="min-h-screen p-8 bg-gray-100">
+      <h1 className="text-3xl font-bold text-center mb-6">AI Water Engineering Hub</h1>
+      <p className="text-center text-gray-600 mb-6">Discuss AI applications in water engineering</p>
+      
+      {/* New Post Section */}
+      <div className="bg-white p-4 rounded-lg shadow-md mb-6">
+        <Input 
+          placeholder="Post Title" 
+          value={newPost.title} 
+          onChange={(e) => setNewPost({ ...newPost, title: e.target.value })} 
+        />
+        <Textarea 
+          placeholder="Write your post here..." 
+          value={newPost.content} 
+          onChange={(e) => setNewPost({ ...newPost, content: e.target.value })} 
+          className="mt-2"
+        />
+        <Button className="mt-2" onClick={handlePostSubmit}>Post</Button>
+      </div>
+      
+      {/* Forum Posts */}
+      {posts.map(post => (
+        <Card key={post.id} className="mb-4">
+          <CardContent>
+            <h2 className="text-xl font-bold">{post.title}</h2>
+            <p className="text-gray-700">{post.content}</p>
+            <div className="mt-4">
+              {post.comments.map((comment, index) => (
+                <p key={index} className="text-gray-500">- {comment}</p>
+              ))}
+              <div className="flex items-center gap-2 mt-2">
+                <Input 
+                  placeholder="Add a comment..." 
+                  value={newComment[post.id] || ""} 
+                  onChange={(e) => setNewComment({ ...newComment, [post.id]: e.target.value })} 
+                />
+                <Button onClick={() => handleCommentSubmit(post.id)}>
+                  <MessageCircle size={16} />
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  );
+};
+
+export default AIWaterHub;
