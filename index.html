@@ -1,81 +1,63 @@
-import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { MessageCircle } from "lucide-react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Water Engineering Hub</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+        header { background: #003366; color: white; padding: 20px; text-align: center; font-size: 24px; font-weight: bold; }
+        nav { background: #00509e; padding: 15px; text-align: center; }
+        nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; }
+        .container { width: 80%; margin: auto; padding: 20px; background: white; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 10px; }
+        .hero { background: #0077b6; color: white; padding: 40px; text-align: center; border-radius: 10px; }
+        .section { margin-top: 30px; padding: 20px; background: #e3f2fd; border-left: 5px solid #00509e; border-radius: 5px; }
+        .section h3 { color: #003366; }
+        ul { list-style-type: none; padding: 0; }
+        ul li { background: white; margin: 10px 0; padding: 10px; border-radius: 5px; box-shadow: 0px 2px 5px rgba(0,0,0,0.1); }
+        footer { background: #003366; color: white; text-align: center; padding: 15px; margin-top: 30px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <header>
+        AI in Water Engineering Learning Hub
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#forum">Forum</a>
+        <a href="#resources">Resources</a>
+        <a href="#courses">Courses</a>
+        <a href="#news">News</a>
+        <a href="#committee">Committee</a>
+    </nav>
+    
+    <div class="container">
+        <div class="hero">
+            <h2>Featured Research Article</h2>
+            <p>Explore the latest advancements in AI applications in Water Engineering.</p>
+        </div>
 
-const AIWaterHub = () => {
-  const [posts, setPosts] = useState([
-    { id: 1, title: "How can AI improve water quality monitoring?", content: "AI models can predict contamination levels in real-time.", comments: [] },
-    { id: 2, title: "Best AI tools for flood prediction?", content: "Machine learning models trained on historical data can improve forecasting.", comments: [] }
-  ]);
-  const [newPost, setNewPost] = useState({ title: "", content: "" });
-  const [newComment, setNewComment] = useState({});
-
-  const handlePostSubmit = () => {
-    if (newPost.title && newPost.content) {
-      setPosts([...posts, { id: posts.length + 1, title: newPost.title, content: newPost.content, comments: [] }]);
-      setNewPost({ title: "", content: "" });
-    }
-  };
-
-  const handleCommentSubmit = (postId) => {
-    if (newComment[postId]) {
-      setPosts(posts.map(post =>
-        post.id === postId ? { ...post, comments: [...post.comments, newComment[postId]] } : post
-      ));
-      setNewComment({ ...newComment, [postId]: "" });
-    }
-  };
-
-  return (
-    <div className="min-h-screen p-8 bg-gray-100">
-      <h1 className="text-3xl font-bold text-center mb-6">AI Water Engineering Hub</h1>
-      <p className="text-center text-gray-600 mb-6">Discuss AI applications in water engineering</p>
-      
-      {/* New Post Section */}
-      <div className="bg-white p-4 rounded-lg shadow-md mb-6">
-        <Input 
-          placeholder="Post Title" 
-          value={newPost.title} 
-          onChange={(e) => setNewPost({ ...newPost, title: e.target.value })} 
-        />
-        <Textarea 
-          placeholder="Write your post here..." 
-          value={newPost.content} 
-          onChange={(e) => setNewPost({ ...newPost, content: e.target.value })} 
-          className="mt-2"
-        />
-        <Button className="mt-2" onClick={handlePostSubmit}>Post</Button>
-      </div>
-      
-      {/* Forum Posts */}
-      {posts.map(post => (
-        <Card key={post.id} className="mb-4">
-          <CardContent>
-            <h2 className="text-xl font-bold">{post.title}</h2>
-            <p className="text-gray-700">{post.content}</p>
-            <div className="mt-4">
-              {post.comments.map((comment, index) => (
-                <p key={index} className="text-gray-500">- {comment}</p>
-              ))}
-              <div className="flex items-center gap-2 mt-2">
-                <Input 
-                  placeholder="Add a comment..." 
-                  value={newComment[post.id] || ""} 
-                  onChange={(e) => setNewComment({ ...newComment, [post.id]: e.target.value })} 
-                />
-                <Button onClick={() => handleCommentSubmit(post.id)}>
-                  <MessageCircle size={16} />
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      ))}
+        <div class="section" id="news">
+            <h3>Recent Research & News</h3>
+            <ul>
+                <li><strong>Article 1:</strong> Summary of latest findings...</li>
+                <li><strong>Article 2:</strong> AI models improving water management...</li>
+                <li><strong>Article 3:</strong> New datasets for hydrological predictions...</li>
+            </ul>
+        </div>
+        
+        <div class="section" id="forum">
+            <h3>Trending Forum Discussions</h3>
+            <ul>
+                <li><strong>Discussion 1:</strong> AI in flood forecasting - 10 upvotes</li>
+                <li><strong>Discussion 2:</strong> Smart water networks - 8 upvotes</li>
+                <li><strong>Discussion 3:</strong> Machine learning for groundwater analysis - 5 upvotes</li>
+            </ul>
+        </div>
     </div>
-  );
-};
-
-export default AIWaterHub;
+    
+    <footer>
+        &copy; 2025 AI in Water Engineering Hub. All rights reserved.
+    </footer>
+</body>
+</html>
