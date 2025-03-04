@@ -33,33 +33,25 @@
     </nav>
     
     <div class="container">
-        <div class="section" id="forum">
-            <h3>Discussion Categories</h3>
-            <ul>
-                <li><strong>AI in Water Modeling</strong></li>
-                <li><strong>Smart Infrastructure</strong></li>
-                <li><strong>Data Science for Water</strong></li>
-                <li><strong>Hydrological Forecasting</strong></li>
-            </ul>
-        </div>
-        
-        <div class="section" id="posts">
-            <h3>Trending Discussions</h3>
-            <ul>
-                <li>
-                    <strong>How AI is revolutionizing flood prediction?</strong>
-                    <div class="post-meta">Posted by User123 | <span class="upvote">12 Upvotes</span> | 5 Comments</div>
-                </li>
-                <li>
-                    <strong>Best datasets for training water quality models?</strong>
-                    <div class="post-meta">Posted by WaterEngineerAI | <span class="upvote">9 Upvotes</span> | 3 Comments</div>
-                </li>
-                <li>
-                    <strong>Machine learning applications in groundwater management</strong>
-                    <div class="post-meta">Posted by AIHydro | <span class="upvote">7 Upvotes</span> | 2 Comments</div>
-                </li>
-            </ul>
-        </div>
+		<div class="section" id="forum">
+			<h3>Trending Forum Discussions</h3>
+			<ul>
+				<li><strong>Discussion 1:</strong> AI in flood forecasting - 10 upvotes</li>
+				<li><strong>Discussion 2:</strong> Smart water networks - 8 upvotes</li>
+				<li><strong>Discussion 3:</strong> Machine learning for groundwater analysis - 5 upvotes</li>
+			</ul>
+
+			<h4>Post a New Discussion</h4>
+			<form action="" method="POST">
+				<label for="title">Title:</label><br>
+				<input type="text" id="title" name="title" required><br><br>
+				
+				<label for="content">Content:</label><br>
+				<textarea id="content" name="content" rows="4" required></textarea><br><br>
+
+				<button type="submit">Post Discussion</button>
+			</form>
+		</div>
     </div>
     
     <footer>
