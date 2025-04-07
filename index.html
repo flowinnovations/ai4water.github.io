@@ -1,62 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI in Water Engineering Hub</title>
-    <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-        header { background: #003366; color: white; padding: 20px; text-align: center; font-size: 24px; font-weight: bold; }
-        nav { background: #00509e; padding: 15px; text-align: center; }
-        nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; }
-        .container { width: 80%; margin: auto; padding: 20px; background: white; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 10px; }
-        .hero { background: #0077b6; color: white; padding: 40px; text-align: center; border-radius: 10px; }
-        .section { margin-top: 30px; padding: 20px; background: #e3f2fd; border-left: 5px solid #00509e; border-radius: 5px; }
-        .section h3 { color: #003366; }
-        ul { list-style-type: none; padding: 0; }
-        ul li { background: white; margin: 10px 0; padding: 10px; border-radius: 5px; box-shadow: 0px 2px 5px rgba(0,0,0,0.1); }
-        footer { background: #003366; color: white; text-align: center; padding: 15px; margin-top: 30px; font-size: 14px; }
-    </style>
-</head>
-<body>
-    <header>
-        AI in Water Engineering Learning Hub
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="forum.html">Forum</a>
-        <a href="resources.html">Resources</a>        
-        <a href="news.html">News</a>
-        <a href="committee.html">Committee</a>
-    </nav>
-    
-    <div class="container">
-        <div class="hero">
-            <h2>Featured Research Article</h2>
-            <p>Explore the latest advancements in AI applications in Water Engineering.</p>
-        </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
 
-        <div class="section" id="news">
-            <h3>Recent Research & News</h3>
-            <ul>
-                <li><strong>Article 1:</strong> Summary of latest findings...</li>
-                <li><strong>Article 2:</strong> AI models improving water management...</li>
-                <li><strong>Article 3:</strong> New datasets for hydrological predictions...</li>
-            </ul>
+    <!-- Navbar -->
+    <header class="bg-white shadow sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600">AI Water Hub</h1>
+        <nav class="space-x-6 text-sm">
+          <a href="#" class="hover:text-blue-600">Home</a>
+          <a href="#" class="hover:text-blue-600">Resources</a>
+          <a href="#" class="hover:text-blue-600">Courses</a>
+          <a href="#" class="hover:text-blue-600">News</a>
+          <a href="#" class="hover:text-blue-600">Forum</a>
+          <a href="#" class="hover:text-blue-600">Committee</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-blue-50 to-white py-20 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-extrabold mb-4">Advancing Water Engineering with AI</h2>
+        <p class="text-lg text-gray-600 mb-6">Discover cutting-edge applications, open resources, and collaborative knowledge for real-world impact.</p>
+        <a href="#resources" class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition">Explore Resources</a>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="max-w-7xl mx-auto px-4 py-16">
+      <h3 class="text-2xl font-semibold mb-8 text-center">Latest News & Research</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+          <h4 class="text-lg font-bold mb-2">AI for Pipe Leak Detection</h4>
+          <p class="text-sm text-gray-600">New machine learning models outperform traditional methods in identifying hidden leaks.</p>
         </div>
-        
-        <div class="section" id="forum">
-            <h3>Trending Forum Discussions</h3>
-            <ul>
-                <li><strong>Discussion 1:</strong> AI in flood forecasting - 10 upvotes</li>
-                <li><strong>Discussion 2:</strong> Smart water networks - 8 upvotes</li>
-                <li><strong>Discussion 3:</strong> Machine learning for groundwater analysis - 5 upvotes</li>
-            </ul>
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+          <h4 class="text-lg font-bold mb-2">Digital Twins in Flood Management</h4>
+          <p class="text-sm text-gray-600">Real-time simulations and predictive controls using AI-powered digital twins.</p>
         </div>
-    </div>
-    
-    <footer>
-        &copy; 2025 AI in Water Engineering Hub. All rights reserved.
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+          <h4 class="text-lg font-bold mb-2">Open Data Sets Released</h4>
+          <p class="text-sm text-gray-600">A new repository of labeled hydrologic and infrastructure datasets is now available.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources & Courses Section -->
+    <section id="resources" class="bg-gray-100 py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h3 class="text-2xl font-semibold mb-8 text-center">Resources & Courses</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-2xl shadow">
+            <h4 class="text-lg font-bold mb-2">Model Repositories</h4>
+            <p class="text-sm text-gray-600">Access pretrained models and documentation for water forecasting, classification, and optimization.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow">
+            <h4 class="text-lg font-bold mb-2">Data Sources</h4>
+            <p class="text-sm text-gray-600">Find curated open-access hydrological, environmental, and infrastructure datasets.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow">
+            <h4 class="text-lg font-bold mb-2">Intro to AI in Water Systems</h4>
+            <p class="text-sm text-gray-600">A beginner-friendly overview of AI tools and their application in water engineering.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow">
+            <h4 class="text-lg font-bold mb-2">Hands-on with ML Models</h4>
+            <p class="text-sm text-gray-600">Build, train, and validate AI models using real water data in Python and Jupyter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forum & Committee -->
+    <section class="bg-gray-100 py-16 px-4">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Community Forum</h3>
+          <p class="text-gray-600 text-sm mb-4">Ask questions, share case studies, or post collaborative projects in our open discussion forum.</p>
+          <a href="#" class="text-blue-600 text-sm hover:underline">Go to Forum →</a>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">AI & Water Committee</h3>
+          <p class="text-gray-600 text-sm mb-4">Meet the team of researchers and professionals shaping the future of water infrastructure with AI.</p>
+          <a href="#" class="text-blue-600 text-sm hover:underline">View Committee →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-6 mt-10">
+      <div class="max-w-7xl mx-auto px-4 flex justify-between text-sm text-gray-500">
+        <p>&copy; 2025 AI Water Hub. All rights reserved.</p>
+        <div class="space-x-4">
+          <a href="#" class="hover:text-blue-600">Contact</a>
+          <a href="#" class="hover:text-blue-600">Privacy</a>
+        </div>
+      </div>
     </footer>
-</body>
+
+  </body>
 </html>
