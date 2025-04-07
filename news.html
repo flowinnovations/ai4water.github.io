@@ -1,89 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News - AI in Water Engineering Hub</title>
-    <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-        header { background: #003366; color: white; padding: 20px; text-align: center; font-size: 24px; font-weight: bold; }
-        nav { background: #00509e; padding: 15px; text-align: center; }
-        nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; }
-        .container { width: 80%; margin: auto; padding: 20px; background: white; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 10px; }
-        .hero { background: #0077b6; color: white; padding: 40px; text-align: center; border-radius: 10px; }
-        .section { margin-top: 30px; padding: 20px; background: #e3f2fd; border-left: 5px solid #00509e; border-radius: 5px; }
-        .section h3 { color: #003366; }
-        .search-bar { margin-bottom: 20px; }
-        .search-bar input { padding: 10px; width: 100%; border-radius: 5px; border: 1px solid #ddd; }
-        ul { list-style-type: none; padding: 0; }
-        ul li { background: white; margin: 10px 0; padding: 10px; border-radius: 5px; box-shadow: 0px 2px 5px rgba(0,0,0,0.1); }
-        footer { background: #003366; color: white; text-align: center; padding: 15px; margin-top: 30px; font-size: 14px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Water Hub - News</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        AI in Water Engineering Learning Hub
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="forum.html">Forum</a>
-        <a href="resources.html">Resources</a>        
-        <a href="news.html">News</a>
-        <a href="committee.html">Committee</a>
-    </nav>
-    
-    <div class="container">
-        <div class="hero">
-            <h2>Latest News & Updates</h2>
-            <p>Stay informed about the latest advancements in AI applications in water engineering.</p>
-        </div>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="Search for news articles..." onkeyup="searchNews()">
-        </div>
-
-        <div class="section" id="latest-news">
-            <h3>Recent News</h3>
-            <ul>
-                <li><a href="https://example.com/news1" target="_blank"><strong>Breakthrough in AI-Driven Water Quality Monitoring</strong> - Researchers develop a novel AI model for real-time water quality assessment.</a></li>
-                <li><a href="https://example.com/news2" target="_blank"><strong>Deep Learning Enhances Flood Prediction Accuracy</strong> - AI models are revolutionizing flood forecasting and prevention strategies.</a></li>
-                <li><a href="https://example.com/news3" target="_blank"><strong>AI-Powered Smart Water Grids Deployed in Urban Areas</strong> - AI-driven water management solutions are improving efficiency in city water distribution.</a></li>
-            </ul>
-        </div>
-
-        <div class="section" id="research-highlights">
-            <h3>Research Highlights</h3>
-            <ul>
-                <li><a href="https://example.com/research1" target="_blank"><strong>New AI Model Predicts Groundwater Depletion</strong> - A deep learning approach to sustainable groundwater management.</a></li>
-                <li><a href="https://example.com/research2" target="_blank"><strong>Satellite AI Analysis for Water Resource Management</strong> - Using AI and satellite imagery to track water levels and quality.</a></li>
-                <li><a href="https://example.com/research3" target="_blank"><strong>AI-Based Early Warning Systems for Water Contamination</strong> - How AI is being integrated into water safety protocols.</a></li>
-            </ul>
-        </div>
-
-        <div class="section" id="industry-news">
-            <h3>Industry News & Developments</h3>
-            <ul>
-                <li><a href="https://example.com/industry1" target="_blank"><strong>AI Startups Transforming Water Management</strong> - Emerging companies using AI to tackle global water challenges.</a></li>
-                <li><a href="https://example.com/industry2" target="_blank"><strong>Government AI Policies for Water Sustainability</strong> - New regulations and AI-driven initiatives for water conservation.</a></li>
-                <li><a href="https://example.com/industry3" target="_blank"><strong>Investment in AI Water Solutions on the Rise</strong> - Funding trends in AI-powered water engineering solutions.</a></li>
-            </ul>
-        </div>
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">AI Water Hub</h1>
+      <nav class="space-x-6 text-sm">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="index.html#resources" class="hover:text-blue-600">Resources</a>
+        <a href="news.html" class="hover:text-blue-600">News</a>
+        <a href="https://collaborate.asce.org/waterforum/home" target="_blank" class="hover:text-blue-600">Forum</a>
+        <a href="committee.html" class="hover:text-blue-600">Committee</a>
+      </nav>
     </div>
-    
-    <footer>
-        &copy; 2025 AI in Water Engineering Hub. All rights reserved.
-    </footer>
+  </header>
 
-    <script>
-        // Simple search functionality to filter news articles
-        function searchNews() {
-            const input = document.getElementById("search").value.toLowerCase();
-            const articles = document.querySelectorAll(".section ul li");
-            articles.forEach((item) => {
-                const text = item.innerText.toLowerCase();
-                item.style.display = text.includes(input) ? "block" : "none";
-            });
-        }
-    </script>
+  <!-- News Section -->
+  <section class="py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Latest News & Insights</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+
+        <!-- Industry News -->
+        <div>
+          <h3 class="text-2xl font-semibold text-blue-600 mb-6">Industry</h3>
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow">
+              <h4 class="text-lg font-bold mb-2">AI Optimizes Water Treatment Operations</h4>
+              <p class="text-sm text-gray-600">Companies are adopting real-time AI control systems to cut costs and improve treatment efficiency.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow">
+              <h4 class="text-lg font-bold mb-2">Smart Leak Detection Tools Launched</h4>
+              <p class="text-sm text-gray-600">New AI-based tools can identify and localize underground pipe leaks more accurately than legacy systems.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic News -->
+        <div>
+          <h3 class="text-2xl font-semibold text-blue-600 mb-6">Academia</h3>
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow">
+              <h4 class="text-lg font-bold mb-2">Research on AI for Urban Flood Prediction</h4>
+              <p class="text-sm text-gray-600">A recent study shows that machine learning outperforms traditional hydrological models in dense urban areas.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow">
+              <h4 class="text-lg font-bold mb-2">AI in Groundwater Modeling</h4>
+              <p class="text-sm text-gray-600">Universities are using neural networks to simulate subsurface flows and inform groundwater management policies.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t py-6 mt-10">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between text-sm text-gray-500">
+      <p>&copy; 2025 AI Water Hub. All rights reserved.</p>
+      <div class="space-x-4">
+        <a href="#" class="hover:text-blue-600">Contact</a>
+        <a href="#" class="hover:text-blue-600">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
