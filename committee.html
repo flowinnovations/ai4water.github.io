@@ -1,89 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Committee - AI in Water Engineering Hub</title>
-    <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-        header { background: #003366; color: white; padding: 20px; text-align: center; font-size: 24px; font-weight: bold; }
-        nav { background: #00509e; padding: 15px; text-align: center; }
-        nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; }
-        .container { width: 80%; margin: auto; padding: 20px; background: white; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); border-radius: 10px; }
-        .hero { background: #0077b6; color: white; padding: 40px; text-align: center; border-radius: 10px; }
-        .section { margin-top: 30px; padding: 20px; background: #e3f2fd; border-left: 5px solid #00509e; border-radius: 5px; }
-        .section h3 { color: #003366; }
-        .committee-member { display: flex; align-items: center; margin: 15px 0; background: white; padding: 15px; border-radius: 5px; box-shadow: 0px 2px 5px rgba(0,0,0,0.1); }
-        .committee-member img { width: 80px; height: 80px; border-radius: 50%; margin-right: 15px; }
-        .committee-member div { flex: 1; }
-        .contact-form { margin-top: 20px; padding: 20px; background: white; border-radius: 5px; box-shadow: 0px 2px 5px rgba(0,0,0,0.1); }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ddd; }
-        .contact-form button { margin-top: 10px; padding: 10px 20px; background: #0077b6; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        footer { background: #003366; color: white; text-align: center; padding: 15px; margin-top: 30px; font-size: 14px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI & Water Committee</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        AI in Water Engineering Learning Hub
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="forum.html">Forum</a>
-        <a href="resources.html">Resources</a>        
-        <a href="news.html">News</a>
-        <a href="committee.html">Committee</a>
-    </nav>
-    
-    <div class="container">
-        <div class="hero">
-            <h2>AI Water Engineering Committee</h2>
-            <p>Meet the experts driving innovation in AI applications for water engineering.</p>
-        </div>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-        <div class="section">
-            <h3>Committee Members</h3>
-            <div class="committee-member">
-                <img src="member1.jpg" alt="Dr. John Doe">
-                <div>
-                    <h4>Dr. John Doe</h4>
-                    <p>Chairperson - Expert in AI for hydrology</p>
-                    <p>Email: johndoe@example.com</p>
-                </div>
-            </div>
-            <div class="committee-member">
-                <img src="member2.jpg" alt="Dr. Jane Smith">
-                <div>
-                    <h4>Dr. Jane Smith</h4>
-                    <p>Vice-Chair - Specialist in machine learning for water resource management</p>
-                    <p>Email: janesmith@example.com</p>
-                </div>
-            </div>
-            <div class="committee-member">
-                <img src="member3.jpg" alt="Dr. Alex Brown">
-                <div>
-                    <h4>Dr. Alex Brown</h4>
-                    <p>Research Lead - AI applications in flood prediction</p>
-                    <p>Email: alexbrown@example.com</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>Join the Committee</h3>
-            <p>If you're passionate about AI in water engineering and want to contribute, fill out the form below to express your interest.</p>
-            <div class="contact-form">
-                <form action="submit_form.php" method="post">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Tell us why you're interested" rows="5" required></textarea>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">AI Water Hub</h1>
+      <nav class="space-x-6 text-sm">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="index.html#resources" class="hover:text-blue-600">Resources</a>
+        <a href="index.html#news" class="hover:text-blue-600">News</a>
+        <a href="https://collaborate.asce.org/waterforum/home" target="_blank" class="hover:text-blue-600">Forum</a>
+        <a href="committee.html" class="hover:text-blue-600">Committee</a>
+      </nav>
     </div>
-    
-    <footer>
-        &copy; 2025 AI in Water Engineering Hub. All rights reserved.
-    </footer>
+  </header>
+
+  <!-- Committee Purpose Statement -->
+  <section class="py-16 px-4 text-center bg-white">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Our Purpose</h2>
+      <p class="text-gray-600 text-lg">
+        The AI & Water Committee brings together researchers, engineers, and practitioners to promote the responsible integration of artificial intelligence into water systems. Our mission is to facilitate knowledge sharing, develop best practices, and support innovation through collaboration.
+      </p>
+    </div>
+  </section>
+
+  <!-- Committee Members -->
+  <section class="bg-gray-100 py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-2xl font-semibold mb-8 text-center">Committee Members</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Member Card Example -->
+        <div class="bg-white p-6 rounded-2xl shadow text-center">
+          <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-gray-300"></div>
+          <h4 class="text-lg font-bold">Dr. Jane Doe</h4>
+          <p class="text-sm text-gray-500">Chair, AI Water Hub</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow text-center">
+          <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-gray-300"></div>
+          <h4 class="text-lg font-bold">Prof. John Smith</h4>
+          <p class="text-sm text-gray-500">University of Water Engineering</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow text-center">
+          <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-gray-300"></div>
+          <h4 class="text-lg font-bold">Dr. Emily Rivers</h4>
+          <p class="text-sm text-gray-500">Smart Infrastructure Solutions</p>
+        </div>
+
+        <!-- Add more member blocks as needed -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t py-6 mt-10">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between text-sm text-gray-500">
+      <p>&copy; 2025 AI Water Hub. All rights reserved.</p>
+      <div class="space-x-4">
+        <a href="#" class="hover:text-blue-600">Contact</a>
+        <a href="#" class="hover:text-blue-600">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
